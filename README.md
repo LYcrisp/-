@@ -13,7 +13,7 @@ python main.py --dataset CiaoDVD --ssl_temp 0.6 --ssl_ureg 0.04 --ssl_ireg 0.05 
 
 数据集太大了，我只留下了HGCL文件夹下的CiaoDV数据集，如果需要运行原模型直接把数据集复制到HGCL_origin下的 dataset 文件夹中就可以了
 
-具体的创新内容是构造了⼀个 `nn.Embedding(item_features,  hide_dim)`，⽤于将每个物品的内容信息进⾏嵌⼊。
+具体的创新内容是构造了⼀个 `nn.Embedding(item_features,  hide_dim)`，用于将每个物品的内容信息进行嵌入，详细的代码修改讲述部分在调研报告中。
 
 优化的结果是HR值由0.7325涨到了0.7411，NDGC由0.5185涨到了0.5293。
 
@@ -21,4 +21,4 @@ python main.py --dataset CiaoDVD --ssl_temp 0.6 --ssl_ureg 0.04 --ssl_ireg 0.05 
 
 ## DiffKG模型
 
-尝试了对热门物品加⼊惩罚项，并尝试加入 Item  共现图，但是优化效果不明显。
+尝试了对热门物品加⼊惩罚项，并尝试加入 Item  共现图，但是优化效果不明显，调研报告中有对代码修改的讲述部分。
